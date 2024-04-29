@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import {
   IconTriangleInverted,
+  IconTriangle,
   IconX,
   IconCategory2 as Menu,
 } from '@tabler/icons-react'
@@ -65,17 +66,9 @@ const NavigationMobile = () => {
                 >
                   <h2 className='text-2xl'>{nav.label}</h2>
                   {isOpenSection && currentSection === nav.key && nav.isList ? (
-                    <IconTriangleInverted
-                      stroke={2}
-                      width={18}
-                      className='animate-rotate-180'
-                    />
+                    <IconTriangle stroke={2} width={18} />
                   ) : (
-                    <IconTriangleInverted
-                      stroke={2}
-                      className='rotate-180 animate-rotate-in'
-                      width={18}
-                    />
+                    <IconTriangleInverted stroke={2} width={18} />
                   )}
                 </header>
                 {isOpenSection && currentSection === nav.key && nav.isList && (

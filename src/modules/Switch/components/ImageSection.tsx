@@ -12,7 +12,7 @@ const ImageSection = ({ src, title }: Props) => {
       <Image
         src={src}
         width='100%'
-        className='rounded-md'
+        className='rounded-md border-2 border-carissma-400/40'
         style={{
           maskImage: 'linear-gradient(to bottom, black 70%, transparent 100%)',
         }}

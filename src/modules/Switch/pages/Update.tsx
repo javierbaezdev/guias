@@ -10,13 +10,16 @@ import {
   seven,
   eight,
 } from '@/assets/NintendoSwitchUpdate'
+import { dayBreak, hbMenu } from '@/assets'
+import { usePageTitle } from '@/shared/hooks'
+
+const TITLE = 'Actualización nintendo switch mágica (versión MARIKO)'
 
 const Update = () => {
+  usePageTitle(TITLE)
   return (
     <section className='flex flex-col gap-2 pb-2 md:gap-8'>
-      <h1 className='text-center md:text-xl'>
-        Actualización nintendo switch mágica (versión MARIKO)
-      </h1>
+      <h1 className='text-center md:text-xl'>{TITLE}</h1>
       <TimeLineContainer>
         <TimeLineItem position={1}>
           <div className='flex flex-col gap-8'>
@@ -89,6 +92,26 @@ const Update = () => {
                 ejecutar la aplicación{' '}
                 <strong className='text-carissma-500'> "Daybreak"</strong>.
               </p>
+
+              <ImageSection
+                title={
+                  <h3>
+                    Seleccionar
+                    <strong className='text-carissma-500'> "bhmenu"</strong>.
+                  </h3>
+                }
+                src={hbMenu}
+              />
+              <ImageSection
+                title={
+                  <h3>
+                    Seleccionar
+                    <strong className='text-carissma-500'> "Daybreak"</strong>.
+                  </h3>
+                }
+                src={dayBreak}
+              />
+
               <p className='text-pretty'>
                 Ahora debes seguir los pasos mostrados en las siguientes
                 imágenes:

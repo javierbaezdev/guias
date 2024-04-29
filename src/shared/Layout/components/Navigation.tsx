@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { IconTriangleInverted } from '@tabler/icons-react'
+import { IconTriangleInverted, IconTriangle } from '@tabler/icons-react'
 import { NAVIGATION } from '@/shared/constants/general'
 
 const Navigation = () => {
@@ -50,17 +50,9 @@ const Navigation = () => {
                 {nav.label}
               </li>
               {isOpen && currentSection === nav.key && nav.isList ? (
-                <IconTriangleInverted
-                  stroke={2}
-                  width={12}
-                  className='animate-rotate-180'
-                />
+                <IconTriangle stroke={2} width={12} />
               ) : (
-                <IconTriangleInverted
-                  stroke={2}
-                  className='rotate-180 animate-rotate-360'
-                  width={12}
-                />
+                <IconTriangleInverted stroke={2} width={12} />
               )}
             </div>
 

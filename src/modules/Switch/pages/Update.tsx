@@ -86,7 +86,7 @@ const Update = () => {
                 Una vez que estés en el modo liberado, abrir la aplicación
                 <strong className='text-carissma-500'> "bhmenu"</strong>.
               </p>
-              <p className='text-pretty'>
+              <p className='text-pretty pb-4'>
                 Dentro de
                 <strong className='text-carissma-500'> "bhmenu"</strong>,
                 ejecutar la aplicación{' '}
@@ -112,7 +112,7 @@ const Update = () => {
                 src={dayBreak}
               />
 
-              <p className='text-pretty'>
+              <p className='text-pretty pt-4'>
                 Ahora debes seguir los pasos mostrados en las siguientes
                 imágenes:
               </p>

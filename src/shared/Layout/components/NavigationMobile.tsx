@@ -44,7 +44,7 @@ const NavigationMobile = () => {
       </div>
       {isOpen && (
         <div className='p- fixed left-0 top-0 z-50 m-0 h-dvh w-screen animate-slide-in-top bg-cod-gray-950'>
-          <div className='pointer-events-none absolute -bottom-24 -left-40 -z-10 opacity-20'>
+          <div className='pointer-events-none absolute -bottom-24 -left-64 -z-10 opacity-20'>
             <Image src={logo} width='500px' className='' />
           </div>
           <div className='pointer-events-none absolute bottom-4 right-2 -z-10 opacity-20'>

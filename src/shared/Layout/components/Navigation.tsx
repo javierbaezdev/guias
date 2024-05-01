@@ -2,7 +2,11 @@ import { useEffect, useRef, useState } from 'react'
 import { IconTriangleInverted, IconTriangle } from '@tabler/icons-react'
 import { NAVIGATION } from '@/shared/constants/general'
 
-const Navigation = () => {
+interface Props {
+  setIsOpenNav: (isOpen: Boolean) => void
+}
+
+const Navigation = ({ setIsOpenNav }: Props) => {
   const wrapperRef = useRef<HTMLDivElement>(null)
   const [isOpen, setIsOpen] = useState(false)
   const [currentSection, setCurrentSection] = useState<string | null>(null)
@@ -31,6 +35,10 @@ const Navigation = () => {
     window.location.href = rute
   }
 
+  useEffect(() => {
+    setIsOpenNav(isOpen)
+  }, [setIsOpenNav, isOpen])
+
   return (
     <div ref={wrapperRef}>
       <ul>
@@ -57,7 +65,7 @@ const Navigation = () => {
             </div>
 
             {nav.isList && isOpen && (
-              <menu className='absolute right-2 top-12 animate-slide-in-top rounded-md bg-cod-gray-900 px-4 py-2'>
+              <menu className='absolute right-4 top-12 z-[200] animate-slide-in-top rounded-md bg-cod-gray-900 px-4 py-2'>
                 <ul className='flex flex-col gap-1'>
                   {nav.options.map((op) => (
                     <li
